@@ -1,7 +1,9 @@
 import React from "react";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 
-export default function ButtonS(props) {
+import { Colors } from "../base/Colors";
+
+export default function SmallButtonNoBorder(props) {
     const { onPress, title = "Sign Up" } = props;
     return (
         <Pressable style={styles.button} onPress={onPress}>
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         fontWeight: "bold",
         letterSpacing: 0.25,
-        color: "white",
+        color: Colors.white,
         textDecorationLine: "underline",
     },
 });

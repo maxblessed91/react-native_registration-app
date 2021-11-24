@@ -9,40 +9,22 @@ import {
 } from "react-native";
 import Container from "../components/Container";
 import Checkbox from "../base/Checkbox";
-import ButtonBSmall from "../base/ButtonBSmall";
-import ButtonNBSmall from "../base/ButtonNBSmall";
-import ButtonNB from "../base/ButtonNB";
+import SmallButtonBorder from "../base/SmallButtonBorder";
+import SmallButtonNoBorder from "../base/SmallButtonNoBorder";
+import BigButtonNoBorder from "../base/BigButtonNoBorder";
+import Input from "../components/Input";
+
+import { Colors } from "../base/Colors";
 
 function SignUp({ navigation }) {
     return (
         <Container>
-            <SafeAreaView
-                style={{
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flex: 1,
-                }}
-            >
+            <SafeAreaView style={styles.view}>
                 <Text style={styles.title}>CREATE YOUR LOGIN</Text>
 
-                <TextInput
-                    style={styles.textInput}
-                    placeholder="Enter Name"
-                    underlineColorAndroid={"transparent"}
-                    placeholderTextColor="#FFFAE6"
-                ></TextInput>
-                <TextInput
-                    style={styles.textInput}
-                    placeholder="Password"
-                    underlineColorAndroid={"transparent"}
-                    placeholderTextColor="#FFFAE6"
-                ></TextInput>
-                <TextInput
-                    style={styles.textInput}
-                    placeholder="Re-Enter Password"
-                    underlineColorAndroid={"transparent"}
-                    placeholderTextColor="#FFFAE6"
-                ></TextInput>
+                <Input />
+                <Input placeholder="Password" />
+                <Input placeholder="Re-Enter Password" />
                 <SafeAreaView style={styles.content}>
                     <Checkbox />
                     <Text style={styles.label}>
@@ -50,18 +32,18 @@ function SignUp({ navigation }) {
                     </Text>
                 </SafeAreaView>
                 <SafeAreaView style={styles.buttonBlock}>
-                    <ButtonNBSmall
+                    <SmallButtonNoBorder
                         style={styles.buttonNoBorder}
                         title="CANCEL"
                         onPress={() => navigation.navigate("Home")}
                     />
-                    <ButtonBSmall
+                    <SmallButtonBorder
                         style={styles.buttonBorder}
                         title="SAVE"
                         onPress={() => navigation.navigate("Confirmation")}
                     />
                 </SafeAreaView>
-                <ButtonNB
+                <BigButtonNoBorder
                     title="Agree to Terms & Conditions"
                     onPress={() => navigation.navigate("Policy")}
                 />
@@ -71,21 +53,19 @@ function SignUp({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    view: {
+        alignItems: "center",
+        justifyContent: "center",
+        flex: 1,
+    },
     margin: {
         marginBottom: 20,
     },
     text: {
-        color: "white",
+        color: Colors.white,
         marginBottom: 20,
     },
-    textInput: {
-        height: 40,
-        width: "88%",
-        marginBottom: 30,
-        color: "#fff",
-        borderBottomColor: "#fff",
-        borderBottomWidth: 1,
-    },
+
     content: {
         display: "flex",
         justifyContent: "flex-end",
@@ -94,13 +74,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     title: {
-        color: "#fff",
+        color: Colors.white,
         fontSize: 24,
         marginBottom: 12,
     },
     label: {
         marginLeft: 14,
-        color: "#fff",
+        color: Colors.white,
         fontSize: 11,
         letterSpacing: 0.5,
     },
@@ -111,14 +91,6 @@ const styles = StyleSheet.create({
         width: "90%",
         marginTop: 20,
     },
-    // buttonNoBorder: {
-    //     paddingVertical: 12,
-    //     paddingHorizontal: 12,
-    // },
-    // buttonBorder: {
-    //     paddingVertical: 12,
-    //     paddingHorizontal: 12,
-    // },
 });
 
 export default SignUp;
