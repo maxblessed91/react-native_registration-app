@@ -1,9 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 
-import { Colors } from "../base/Colors";
-
-export default function BigButtonNoBorder(props) {
+export default function ButtonB(props) {
     const { onPress, title = "Sign Up" } = props;
     return (
         <Pressable style={styles.button} onPress={onPress}>
@@ -16,19 +14,19 @@ const styles = StyleSheet.create({
     button: {
         alignItems: "center",
         justifyContent: "center",
-        paddingVertical: 12,
+        paddingVertical: 14,
         paddingHorizontal: 32,
-        borderRadius: 20,
+        borderRadius: 26,
         elevation: 3,
-        width: "88%",
-        marginTop: -12,
+        backgroundColor: "white",
+        width: "48%",
+        marginBottom: 16,
     },
     text: {
-        fontSize: 10,
-        lineHeight: 16,
+        fontSize: 14,
+        lineHeight: 20,
         fontWeight: "bold",
         letterSpacing: 0.25,
-        color: Colors.white,
-        textDecorationLine: "underline",
+        color: "#FE7547",
     },
 });

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import { Colors } from "../base/Colors";
-
 function MyCheckbox() {
     const [checked, onChange] = useState(true);
 
@@ -29,12 +27,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
         borderRadius: 4,
         borderWidth: 2,
-        borderColor: Colors.coral,
+        borderColor: "coral",
         backgroundColor: "transparent",
     },
 
     checkboxChecked: {
-        backgroundColor: Colors.coral,
+        backgroundColor: "coral",
     },
 });
 

@@ -1,36 +1,38 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, Image, SafeAreaView, View } from "react-native";
 import Container from "../components/Container";
-import BigButtonBorder from "../base/BigButtonBorder";
-import BigButtonNoBorder from "../base/BigButtonNoBorder";
-
-import { Colors } from "../base/Colors";
+import ButtonB from "../base/ButtonB";
+import ButtonNB from "../base/ButtonNB";
 
 function Home({ navigation }) {
     return (
         <Container>
-            <View style={styles.view}>
+            <View
+                style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flex: 1,
+                }}
+            >
                 <Image
                     style={styles.image}
-                    source={require("../assets/app-logo.jpg")}
+                    source={require("../assets/asd2.jpg")}
                 />
                 <Text style={(styles.margin, styles.text)}>Image</Text>
 
-                <BigButtonBorder
+                <ButtonB
                     style={styles.margin}
                     title="Sign in with Facebook"
                     onPress={() => navigation.navigate("Facebook")}
                 />
-                <BigButtonBorder
+                <ButtonB
                     title="Sign in with Twitter"
                     onPress={() => navigation.navigate("Twitter")}
                 />
 
-                <BigButtonBorder
-                    onPress={() => navigation.navigate("SignUp")}
-                />
+                <ButtonB onPress={() => navigation.navigate("SignUp")} />
 
-                <BigButtonNoBorder
+                <ButtonNB
                     title="ALREADY REGISTERED? SIGN IN"
                     onPress={() => navigation.navigate("SignIn")}
                 />
@@ -40,16 +42,11 @@ function Home({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    view: {
-        alignItems: "center",
-        justifyContent: "center",
-        flex: 1,
-    },
     margin: {
         marginBottom: 20,
     },
     text: {
-        color: Colors.white,
+        color: "white",
         marginBottom: 20,
     },
 });

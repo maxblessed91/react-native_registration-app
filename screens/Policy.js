@@ -2,14 +2,18 @@ import React from "react";
 import { StyleSheet, Text, Button, SafeAreaView, View } from "react-native";
 
 import Container from "./../components/Container";
-import BigButtonBorder from "../base/BigButtonBorder";
-
-import { Colors } from "../base/Colors";
+import ButtonB from "../base/ButtonB";
 
 function Policy({ navigation }) {
     return (
         <Container>
-            <View style={styles.view}>
+            <View
+                style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flex: 1,
+                }}
+            >
                 <Text style={styles.header}>OUR POLICY</Text>
                 <Text style={styles.policy}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -21,7 +25,7 @@ function Policy({ navigation }) {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                 </Text>
-                <BigButtonBorder
+                <ButtonB
                     title="Back to Sign Up"
                     onPress={() => navigation.navigate("SignUp")}
                 />
@@ -31,13 +35,8 @@ function Policy({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    view: {
-        alignItems: "center",
-        justifyContent: "center",
-        flex: 1,
-    },
     header: {
-        color: Colors.coralWhite,
+        color: "#FFFAE6",
         fontSize: 24,
         justifyContent: "center",
         display: "flex",
@@ -46,14 +45,13 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     policy: {
-        color: Colors.white,
+        color: "white",
         fontSize: 18,
         justifyContent: "center",
         display: "flex",
         alignItems: "center",
-        textAlign: "left",
+        textAlign: "center",
         marginBottom: 20,
-        paddingHorizontal: 16,
     },
 });
 

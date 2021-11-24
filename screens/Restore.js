@@ -2,19 +2,23 @@ import React from "react";
 import { StyleSheet, Text, Button, SafeAreaView, View } from "react-native";
 
 import Container from "./../components/Container";
-import BigButtonBorder from "../base/BigButtonBorder";
-
-import { Colors } from "../base/Colors";
+import ButtonB from "../base/ButtonB";
 
 function Restore({ navigation }) {
     return (
         <Container>
-            <View style={styles.view}>
+            <View
+                style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flex: 1,
+                }}
+            >
                 <Text style={styles.welcome}>
                     Check e-mail to restore your password.
                 </Text>
-                <BigButtonBorder
-                    title="Go Home"
+                <ButtonB
+                    title="Temporary btn"
                     onPress={() => navigation.navigate("Home")}
                 />
             </View>
@@ -23,13 +27,8 @@ function Restore({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    view: {
-        alignItems: "center",
-        justifyContent: "center",
-        flex: 1,
-    },
     welcome: {
-        color: Colors.white,
+        color: "white",
         fontSize: 24,
         justifyContent: "center",
         display: "flex",
