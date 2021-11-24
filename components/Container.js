@@ -2,9 +2,14 @@ import React from "react";
 import { StyleSheet, SafeAreaView, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
+import { Colors } from "../base/Colors";
+
 function Container({ children }) {
     return (
-        <LinearGradient colors={["#FE7547", "#F5336F"]} style={styles.gradient}>
+        <LinearGradient
+            colors={[Colors.orange, Colors.pink]}
+            style={styles.gradient}
+        >
             <SafeAreaView style={styles.container}>{children}</SafeAreaView>
         </LinearGradient>
     );

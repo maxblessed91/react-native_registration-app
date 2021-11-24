@@ -1,7 +1,9 @@
 import React from "react";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 
-export default function ButtonB(props) {
+import { Colors } from "../base/Colors";
+
+export default function SmallButtonBorder(props) {
     const { onPress, title = "Sign Up" } = props;
     return (
         <Pressable style={styles.button} onPress={onPress}>
@@ -16,10 +18,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 14,
         paddingHorizontal: 32,
-        borderRadius: 20,
+        borderRadius: 26,
         elevation: 3,
-        backgroundColor: "white",
-        width: "88%",
+        backgroundColor: Colors.white,
+        width: "48%",
         marginBottom: 16,
     },
     text: {
@@ -27,6 +29,6 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         fontWeight: "bold",
         letterSpacing: 0.25,
-        color: "#FE7547",
+        color: Colors.orange,
     },
 });

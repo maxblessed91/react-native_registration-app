@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, Text, Button, SafeAreaView, View } from "react-native";
 
 function Facebook({ navigation }) {
     return (
-        <View
-            style={{
-                alignItems: "center",
-                justifyContent: "center",
-                flex: 1,
-            }}
-        >
+        <View style={styles.view}>
             <Text>Redirecting to Twitter page...</Text>
             <Button
                 title="Go back"
@@ -18,5 +12,13 @@ function Facebook({ navigation }) {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    view: {
+        alignItems: "center",
+        justifyContent: "center",
+        flex: 1,
+    },
+});
 
 export default Facebook;
